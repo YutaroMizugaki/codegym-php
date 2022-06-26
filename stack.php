@@ -4,14 +4,17 @@ $stack = array();
 function push($str){
     global $stack;  //$stackを関数内でも使えるようにしています。
     //ここからソースコードを記載してください。
-    
+    //$stack[0] = $str; 
+    $stack[]=$str;
     //ここまでソースコードを記載してください。
 }
 
 function pop(){
     global $stack;  //$stackを関数内でも使えるようにしています。
     //ここからソースコードを記載してください。
-    
+    $count=count($stack);
+    unset($stack[$count - 1]);
+    $stack = array_values($stack);
     //ここまでソースコードを記載してください。
 }
 
